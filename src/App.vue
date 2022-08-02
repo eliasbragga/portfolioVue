@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <HomePage/>
+    <HelloWorld/>
+    <JogoCobrinha/>
+    <CarouselImages/>
+    <DescricaoProjetos/>
+    <FinalizandoProjeto/>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HomePage from './views/HomePage'
+import HelloWorld from './views/HelloWorld'
+import CarouselImages from './views/CarouselImages'
+import DescricaoProjetos from './views/DescricaoProjetos'
+import FinalizandoProjeto from './views/FinalizandoProjeto'
+import JogoCobrinha from './views/JogoCobrinha'
+
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+  data(){
+    return {
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+    }
+  },
+  components: {
+    HomePage,
+    HelloWorld,
+    CarouselImages,
+    DescricaoProjetos,
+    FinalizandoProjeto,
+    JogoCobrinha
+  }
+  
+};
+</script>
