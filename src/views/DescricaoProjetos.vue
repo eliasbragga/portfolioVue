@@ -3,10 +3,15 @@
     <v-container grid-list-xl class="py-10">
       <h1 class="title__projeto mb-10">{{ descricao }}</h1>
       <v-layout row wrap class="pa-5">
+        <v-img src="../assets/b1.png"></v-img>
+        <v-flex xs4 v-for="(link, i) in links" :key="i">
+          <v-img :src="link.url" aspect-ratio="1"/>
+        </v-flex>
+      </v-layout>
+      <!-- <v-layout row wrap class="pa-5">
         <v-flex lg12 xs class="">
           <v-row>
             <v-flex
-              col12
               lg4
               xs12
               offset-md0
@@ -25,7 +30,7 @@
                 aspect-ratio="1"
                 class="grey lighten-2 cols12 lg6 image"
               >
-                <!-- <img src="../../static/b4.png" alt=""> -->
+                
                 <v-expansion-panels focusable>
                   <v-expansion-panel>
                     <v-expansion-panel-header>{{
@@ -59,10 +64,9 @@
               class="pa-4"
               active-class="success"
               show-arrows
-              
             >
               <v-slide-item
-                v-for="(icone,i) in icones"
+                v-for="(icone, i) in icones"
                 :key="i"
                 v-slot="{ active, toggle }"
               >
@@ -73,8 +77,10 @@
                   width="100"
                   @click="toggle"
                 >
-                
-                <v-img src="http://localhost:8080/img/Bootstrap_logo.svg.bd61e5c2.png" height="100%"></v-img>
+                  <v-img
+                    src="http://localhost:8080/img/Bootstrap_logo.svg.bd61e5c2.png"
+                    height="100%"
+                  ></v-img>
                   <v-row class="fill-height" align="center" justify="center">
                     <v-scale-transition>
                       <v-icon
@@ -97,7 +103,7 @@
             </v-expand-transition>
           </v-sheet>
         </v-flex>
-      </v-layout>
+      </v-layout> -->
     </v-container>
   </div>
 </template>
@@ -107,24 +113,24 @@ export default {
   name: "DescricaoProjetos",
   data() {
     return {
-      icones:[
+      icones: [
         {
-          url:"http://localhost:8080/img/js.7b936471.png",
-        }
+          url: "http://localhost:8080/img/js.7b936471.png",
+        },
       ],
-      model: null,  
+      model: null,
       descricao: "Descrição dos projetos",
       links: [
         {
-          url: "/img/b1.457afb4b.png",
+          url: require("../assets/b1.png"),
           item: "Make Your Burger",
         },
         {
-          url: "/img/b2.808fc5c8.png",
+          url: require("../assets/b2.png"),
           item: "Henarmonia",
         },
         {
-          url: "/img/b4.14017739.png",
+          url: require("../assets/b3.png"),
           item: "Solive",
         },
       ],
@@ -169,7 +175,7 @@ export default {
   text-align: center;
 }
 
->>>.theme--light.v-sheet {
+>>> .theme--light.v-sheet {
   background-color: transparent;
 }
 </style>

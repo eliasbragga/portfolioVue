@@ -12,7 +12,7 @@
             max-width="250"
             min-width="50px"
             min-height="50px"
-            src="../../static/fotoPerfil.jpg"
+            src="../assets/fotoPerfil.jpg"
           ></v-img>
         </v-flex>
         <v-flex col lg7 xs12
