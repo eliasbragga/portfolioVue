@@ -7,7 +7,7 @@ Vue.config.productionTip = false
 Vue.use(VueScrollReveal, {
   class: 'v-scroll-reveal',
   duration: 1000,
-  scale: 2,
+  scale: 1,
   distance: '200px',
   mobile: false
 });

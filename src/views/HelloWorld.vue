@@ -1,6 +1,6 @@
 <template>
   <div id="helloWorld">
-    <v-container grid-list-xl class="cards pa-0 py-10 " >
+    <v-container grid-list-xl class="cards px-16 py-10 " >
       <h1 class="cards__title mb-7"> {{ mensage }} </h1>
       <v-layout row wrap class="cards__layout ma-0">
         <v-flex class="card"  col12 md6 lg6 v-for="(card, i) in cards" :key="i">
@@ -34,17 +34,17 @@ export default {
         {
           nome: "Qual meu objetivo",
           descricao:
-          "O objetivo deste projeto é mostrar um pouco dos meus conhecimentos em front-end."
+          "O objetivo deste projeto é alocar meus projetos pessoais e afins, e para que você possa me conhecer um pouco mais. Meu objetivo com a programação é  ."
         },
         {
           nome: "O que estudo?",
           descricao:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur aut ut quisquam minus consequuntur similique error neque quae accusantium exercitationem reprehenderit ad,."
+          "Atualmente estudo tecnologias como HTML5, CSS3 JavaScript e SQL. Estudo desenvolvimento web focado no front-end e frameworks como Vue.js e React.js sempre focando em utilizar boas práticas em JavaScript. Também tenho conhecimento em testes automatizados e banco de dados. "
         },
         {
           nome: "O que utilizei?",
           descricao:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur aut ut quisquam minus consequuntur similique error neque quae accusantium exercitationem reprehenderit ad,."
+          "Para a realização deste projeto utilizei Vue.js com a biblioteca visual Vuetify e teste automatizado para testar o fluxo da aplicação do início ao fim. "
         },
       ],
     };
@@ -59,6 +59,7 @@ export default {
 
 .cards {
   background-color: #f2be22;
+  min-height: 700px;
   
   
 }

@@ -4,7 +4,7 @@
       <v-layout row wrap style="height: 50%">
         <v-flex md8 sm12 lg6 offset-xs1 offset-md0 >
           <div class="">
-            <p class="home__boas-vindas">Ola. Seja bem vindo!</p>
+            <p class="home__boas-vindas">Olá. Seja bem vindo!</p>
             <br />
             <p id="home__boas-vindas-ID" class="typing-animation">
               Eu sou o Elias
@@ -12,12 +12,14 @@
             <br />
             <p class="home__boas-vindas">e este é meu portfólio</p>
           </div>
+          <v-flex v-scroll-reveal>
+            <p class="home__titulo" >Front-End Developer</p>
+          </v-flex>
         </v-flex>
         <v-flex md4 sm6 lg6 offset-xs3 offset-md0 xs8>
           <v-img
-            v-scroll-reveal
             class="home__image"
-            src="../assets/imagens/avatarPortifolio (2).png"
+            src="../../static/avatar/avatarPortifolio (2).png"
             :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
             aspect-ratio="1"
           >
@@ -38,6 +40,7 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@1&family=Jura:wght@500&family=Mouse+Memoirs&display=swap');
 #home {
   height: 100vh;
   background-image: url("../assets/gifs/backgroundGif.webp");
@@ -101,8 +104,67 @@ export default {
   }
 
   to {
-    width: 70%;
+    width: 50%;
   }
+}
+
+
+
+@media screen and (max-width: 780px) {
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 80%;
+  }
+}
+}
+
+.home__titulo {
+font-family: 'Jura', sans-serif;
+font-size: 1.3em;
+color: white;
+
+}
+@media screen and (max-width: 1024px) {
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 75%;
+  }
+}
+}
+
+@media screen and (max-width: 1440px) {
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 75%;
+  }
+}
+}
+@media screen and (max-width: 600px) {
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 90%;
+  }
+}
 }
 
 @keyframes blinkCursor {

@@ -3,7 +3,7 @@
     <v-container grind-list-xl class="py-10">
       <h1 v-scroll-reveal class="finalizando__title mb-5">Finalizando</h1>
       <v-layout row wrap align-center pa-3>
-        <v-flex col xs6 offset-xs4 offset-md0 lg3>
+        <v-flex col xs6 offset-xs4 offset-md0 lg2>
           <v-img
             v-scroll-reveal
             class="finalizando__image mb-16"
@@ -12,10 +12,10 @@
             max-width="250"
             min-width="50px"
             min-height="50px"
-            src="../assets/fotoPerfil.jpg"
+            src="../../static/fotoPerfil/fotoPerfil.jpg"
           ></v-img>
         </v-flex>
-        <v-flex col lg7 xs12
+        <v-flex col lg8 xs12
           ><p v-scroll-reveal class="finalizando__texto-sobre">
             Estudante autodidata de Desenvolvimento Web com foco em front-end.
             Tenho conhecimentos em: HTML, CSS, Javascript, frameworks como
@@ -46,27 +46,65 @@
             estou disposto a isto!Que tal conversarmos sobre?
           </p></v-flex
         >
-        <v-flex lg2 xs12 offset-xs5 offset-md0 v-scroll-reveal>
+        <v-flex class="ma-auto finalizando__buttoon"  lg12  md8 xs12 v-scroll-reveal >
           <v-btn
-            
+            block
+            @click="openDialog"
             color="green"
-            class="ma-2 white--text"
-            @click="loader = 'loading3'"
+            class="mx-auto white--text"
+            width="59px"
           >
-            Currículo
-            <v-icon right dark> mdi-cloud-download </v-icon>
+            CURRÍCULO
           </v-btn>
         </v-flex>
+        <v-flex v-for="(info,i) in infos" :key="i" lg1 md4 xs12 class="finalizando__flex-icones mx-auto my-5"> 
+          <a :href="info.link" target="_blank"><img class="finalizando__icone"
+              :src="info.icone"
+              target="_blank"
+          /></a>
+        </v-flex>
       </v-layout>
+      <DialogComp :switchDialog="switchDialog" @closeDialog="closeDialog" />
+
     </v-container>
   </div>
 </template>
 
 <script>
+import DialogComp from "./DialogComp.vue";
 export default {
   name: "FinalizandoProjeto",
   data() {
-    return {};
+    return {
+      switchDialog: false,
+      infos: [
+        {
+          link: "https://www.instagram.com/bragga_elias/",
+          icone:
+            "https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white",
+        },
+        {
+          link: "https://github.com/eliasbragga",
+          icone: require("../../static/icones/github.png"),
+        },
+        {
+          link: "https://www.linkedin.com/in/elias-braga-069144172/",
+          icone:
+            "https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white",
+        },
+      ],
+    };
+  },
+  methods: {
+    openDialog() {
+      this.switchDialog = !this.switchDialog;
+    },
+    closeDialog() {
+      this.switchDialog = !this.switchDialog
+    }
+  },
+  components: {
+    DialogComp,
   },
 };
 </script>
@@ -95,5 +133,16 @@ export default {
 
 .button {
   margin: auto;
+  
 }
+
+.finalizando__buttoon {
+  width: 50%;
+}
+
+>>>.v-btn--block {   
+    min-width: 66% !important;    
+}
+
+
 </style>
