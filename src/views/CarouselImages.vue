@@ -78,4 +78,14 @@ export default {
    font-family: "Chelsea Market", cursive;
 }
 
+@media screen and (max-width: 600px) {
+  .carousel__title {
+  color:#f2be22;
+  text-align: center;
+   font-family: "Chelsea Market", cursive;
+   font-size: 1.4em;
+}
+
+}
+
 </style>

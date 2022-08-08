@@ -1,9 +1,9 @@
 <template>
   <div id="helloWorld">
     <v-container grid-list-xl class="cards px-16 py-10 " >
-      <h1 class="cards__title mb-7"> {{ mensage }} </h1>
+      <h1 class="cards__title mb-7"> {{ title }} </h1>
       <v-layout row wrap class="cards__layout ma-0">
-        <v-flex class="card"  col12 md6 lg6 v-for="(card, i) in cards" :key="i">
+        <v-flex class="card"  col12 md6 sm6 lg6 v-for="(card, i) in cards" :key="i">
           <v-card
                        
             v-scroll-reveal
@@ -24,22 +24,22 @@ export default {
   name: "HelloWorld",
   data() {
     return {
-      mensage:"Hello World",
+      title:"Hello World",
       cards: [
         {
           nome: "Quem sou eu?",
           descricao:
-            "Me chamo Elias, tenho 23 anos e estou graduando no curso Análise e desenvolvimento de sistemas pela UNIASSELVI. Atualmente sou professor de música e estou em transição de carreira Atualmente sou professor de música e estou em transição de carreira",
+            "Me chamo Elias, tenho 24 anos e curso Análise e desenvolvimento de sistemas pela UNIASSELVI. Sou natural de Senador Pompeu-CE e moro em Fortaleza-CE. Atualmente sou professor de música e estou em transição de carreira",
         },
         {
           nome: "Qual meu objetivo",
           descricao:
-          "O objetivo deste projeto é alocar meus projetos pessoais e afins, e para que você possa me conhecer um pouco mais. Meu objetivo com a programação é  ."
+          "O objetivo deste projeto é alocar meus projetos pessoais e afins, e para que você possa me conhecer e conhecer meu trabalho um pouco mais. Meu objetivo com a programação é ajudar pessoas com a ajuda de computadores."
         },
         {
           nome: "O que estudo?",
           descricao:
-          "Atualmente estudo tecnologias como HTML5, CSS3 JavaScript e SQL. Estudo desenvolvimento web focado no front-end e frameworks como Vue.js e React.js sempre focando em utilizar boas práticas em JavaScript. Também tenho conhecimento em testes automatizados e banco de dados. "
+          "Atualmente estudo tecnologias como HTML5, CSS3 e JavaScript. Estudo desenvolvimento web focado no front-end e frameworks como Vue.js e React.js sempre focando na acessibilidade e experiência do usuário e  em utilizar boas práticas em JavaScript. Também tenho conhecimento em testes automatizados e banco de dados. "
         },
         {
           nome: "O que utilizei?",
@@ -85,5 +85,13 @@ export default {
 .descricao {
    font-size:2vh;
  
+}
+
+@media screen and (max-width: 600px) {
+  .cards__title{
+  text-align: center;
+  font-family: "Chelsea Market", cursive;
+  font-size: 1.4em;
+}
 }
 </style>

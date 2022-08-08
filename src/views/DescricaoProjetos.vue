@@ -3,7 +3,7 @@
     <v-container grid-list-xl class="py-10">
       <h1 class="title__projeto mb-10">{{ title }}</h1>
       <v-layout row wrap class="pa-5" >
-        <v-flex lg3 xs12 offset-sm3 sm6 offset-md0 md4 v-for="(path, i) in paths" :key="i">
+        <v-flex lg3 xs12 offset-sm3 sm6 offset-md0 md4 v-for="(path, i) in paths" :key="i" >
           <v-card
             v-scroll-reveal       
             class="mx-auto elevation-4"
@@ -80,7 +80,7 @@ export default {
         {
           url: require("../../static/projetos/projeto-soliv-2.png"),
           title: "Solive",
-          description:"Site desenvolvido para servir como portfólio dos principais trabalhos artesanais do cliente. O site conta com links das redes soiciais e com uma galeria de fotos dos principais trabalhos. Utilizei HTML5 e CSS3 para a o desenvolvimento do projeto. ",
+          description:"Site desenvolvido para servir como portfólio dos principais trabalhos artesanais do cliente. O site conta com links das redes soiciais e com uma galeria de fotos dos principais trabalhos. Utilizei HTML5 e CSS3 para o desenvolvimento do projeto. ",
           show:false,
           link:"https://github.com/eliasbragga/site-solive"
         },
@@ -112,29 +112,7 @@ export default {
           show:false,
           link:"https://github.com/eliasbragga/projeto_cordel"
         },
-      ],
-      cards: [
-        {
-          titulo: "Henarmonia",
-          descricao:
-            "Me chamo Elias, tenho 23 anos e estou graduando no curso Análise e desenvolvimento de sistemas pela UNIASSELVI. Atualmente sou professor de música e estou em transição de carreira",
-        },
-        {
-          titulo: "Create your Burger",
-          descricao:
-            "O objetivo deste projeto é mostrar um pouco dos meus conhecimentos em front-end.",
-        },
-        {
-          titulo: "AIKO",
-          descricao:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur aut ut quisquam minus consequuntur similique error neque quae accusantium exercitationem reprehenderit ad,.",
-        },
-        {
-          titulo: "O que utilizei?",
-          descricao:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur aut ut quisquam minus consequuntur similique error neque quae accusantium exercitationem reprehenderit ad,.",
-        },
-      ],
+      ],      
     };
   },
   methods: {
@@ -206,6 +184,13 @@ export default {
 
   .card__text-descricao{
   font-size: 15px;
+}
+
+.title__projeto {
+  font-family: "Chelsea Market", cursive;
+  text-align: center;
+  color: #F2BE22;
+  font-size: 1.4em;
 }
 
 }

@@ -2,6 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import VueScrollReveal from 'vue-scroll-reveal';
+import VueTilt from 'vue-tilt.js'
+
+Vue.use(VueTilt)
 
 Vue.config.productionTip = false
 Vue.use(VueScrollReveal, {

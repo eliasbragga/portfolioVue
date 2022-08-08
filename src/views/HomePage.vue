@@ -2,7 +2,7 @@
   <div id="home">
     <v-container grid-list-xl class="home__container">
       <v-layout row wrap style="height: 50%">
-        <v-flex md8 sm12 lg6 offset-xs1 offset-md0 >
+        <v-flex md8 sm12 lg6 offset-xs1 offset-md0>
           <div class="">
             <p class="home__boas-vindas">Olá. Seja bem vindo!</p>
             <br />
@@ -13,7 +13,7 @@
             <p class="home__boas-vindas">e este é meu portfólio</p>
           </div>
           <v-flex v-scroll-reveal>
-            <p class="home__titulo" >Front-End Developer</p>
+            <p class="home__titulo">Front-End Developer</p>
           </v-flex>
         </v-flex>
         <v-flex md4 sm6 lg6 offset-xs3 offset-md0 xs8>
@@ -40,17 +40,17 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@1&family=Jura:wght@500&family=Mouse+Memoirs&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One:ital@1&family=Jura:wght@500&family=Mouse+Memoirs&display=swap");
 #home {
   height: 100vh;
-  background-image: url("../assets/gifs/backgroundGif.webp");
+  background-image: url("../../static/gifs/backgroundGif.webp");
   background-attachment: fixed;
   background-size: cover;
 }
 
 .home__container {
   position: relative;
-  top: 30%;
+  top: 25%;
   width: 80%;
   margin: auto;
 }
@@ -108,63 +108,135 @@ export default {
   }
 }
 
-
-
 @media screen and (max-width: 780px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
 
-@keyframes typing {
-  from {
-    width: 0;
+    to {
+      width: 80%;
+    }
   }
 
-  to {
+  .home__container {
+    position: relative;
+    top: 10%;
     width: 80%;
+    margin: auto;
   }
 }
+
+.home__image {
+  width: 80%;
+  animation: animationAvatar 4000ms infinite linear;
 }
 
 .home__titulo {
-font-family: 'Jura', sans-serif;
-font-size: 1.3em;
-color: white;
-
+  font-family: "Jura", sans-serif;
+  font-size: 1.3rem;
+  color: white;
 }
 @media screen and (max-width: 1024px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 75%;
+    to {
+      width: 85%;
+    }
   }
 }
+
+.home__image {
+  width: 50%;
+  animation: animationAvatar 4000ms infinite linear;
 }
+
+@media screen and (max-width: 1920px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 65%;
+    }
+  }
+}
+
+
 
 @media screen and (max-width: 1440px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
 
-@keyframes typing {
-  from {
-    width: 0;
+    to {
+      width: 75%;
+    }
   }
-
-  to {
-    width: 75%;
-  }
-}
 }
 @media screen and (max-width: 600px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
 
-@keyframes typing {
+    to {
+      width: 90%;
+    }
+  }
+
+  .home__titulo {
+    font-family: "Jura", sans-serif;
+    font-size: 12px;
+    color: white;
+  }
+}
+
+@keyframes blinkCursor {
   from {
-    width: 0;
+    border-right-color: rgba(255, 255, 255, 0.75);
   }
 
   to {
-    width: 90%;
+    border-right-color: transparent;
   }
 }
+
+@keyframes animationAvatar {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: 20px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 100%;
+    }
+  }
+
+  .home__titulo {
+    font-family: "Jura", sans-serif;
+    font-size: 12px;
+    color: white;
+  }
 }
 
 @keyframes blinkCursor {

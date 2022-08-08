@@ -1,9 +1,9 @@
 <template>
   <div id="finalizando">
     <v-container grind-list-xl class="py-10">
-      <h1 v-scroll-reveal class="finalizando__title mb-5">Finalizando</h1>
+      <h1 v-scroll-reveal class="finalizando__title my-5">Finalizando</h1>
       <v-layout row wrap align-center pa-3>
-        <v-flex col xs6 offset-xs4 offset-md0 lg2>
+        <v-flex col xs6 offset-xs3 offset-md4 offset-sm4 offset-lg0 lg2>
           <v-img
             v-scroll-reveal
             class="finalizando__image mb-16"
@@ -18,26 +18,25 @@
         <v-flex col lg8 xs12
           ><p v-scroll-reveal class="finalizando__texto-sobre">
             Estudante autodidata de Desenvolvimento Web com foco em front-end.
-            Tenho conhecimentos em: HTML, CSS, Javascript, frameworks como
-            Vue.js, React.js, Versionamento com Git e GitHub. Tenho
-            conhecimentos básicos em: Python; Flask | SQL |. Gosto de resolver
-            desafios, gosto de criar, sou automotivado e tenho sede de aprender.
-            Desde que conheci a programação, novos objetivos surgiram. Trabalho
-            há 5 anos na área da cultura como Professor de Música particular, o
-            que muito me ajudou em minha comunicação, trabalho em equipe,
-            liderança e me ensinou a aprender a aprender. Acredito que os passos
-            mais importantes para adquirir novas habilidades são a prática e a
-            vontade de aprender. Estou em migração de carreira profissional
-            entre duas áreas pelas quais sou apaixonado: música e tecnologia.
-            Utilizo as ferramentas de programação para tornar mais prático e
-            didático o ensino da música. Para isso, criei o App Enarmonia
-            Simples, que ajuda meus alunos a descobrirem as notas enarmônicas
-            (link do projeto:
-            <a href="https://github.com/eliasbragga/projeto_enarmonico"
+            Tenho conhecimentos em: HTML5, CSS3, Javascript, frameworks como
+            Vue.js, React.js, Versionamento com Git e GitHub, bibliotecas
+            visuais como Vuetify e Bootstrap, testes automatizados com Cypress.
+            Tenho conhecimentos básicos em: Python; Flask | SQL |. Gosto de
+            resolver desafios, gosto de criar, sou automotivado e tenho sede de
+            aprender. Acredito que os passos mais importantes para adquirir
+            novas habilidades são a prática e a vontade de aprender. Estou em
+            migração de carreira profissional entre duas áreas pelas quais sou
+            apaixonado: música e tecnologia. Utilizo as ferramentas da
+            programação para tornar mais prático e didático o ensino da música.
+            Para isso, criei o App Enarmonia Simples, que ajuda meus alunos a
+            descobrirem as notas enarmônicas (link do projeto:
+            <a target="_blank" href="https://github.com/eliasbragga/projeto_enarmonico"
               >Projeto Enarmonia</a
             >
             ) e estou desenvolvendo um site para alocação dos conteúdos
             ministrados em aula, tais como: vídeos, PDFs e exercícios.
+            Estou procurando minha primeira oportunidade na área, quem sabe, na sua empresa. <br> <br>
+            E-mail: bragga_elias44@gmail.com
           </p>
 
           <p>
@@ -46,7 +45,13 @@
             estou disposto a isto!Que tal conversarmos sobre?
           </p></v-flex
         >
-        <v-flex class="ma-auto finalizando__buttoon"  lg12  md8 xs12 v-scroll-reveal >
+        <v-flex
+          class="ma-auto finalizando__buttoon"
+          lg12
+          md12
+          xs12
+          v-scroll-reveal
+        >
           <v-btn
             block
             @click="openDialog"
@@ -57,15 +62,21 @@
             CURRÍCULO
           </v-btn>
         </v-flex>
-        <v-flex v-for="(info,i) in infos" :key="i" lg1 md4 xs12 class="finalizando__flex-icones mx-auto my-5"> 
-          <a :href="info.link" target="_blank"><img class="finalizando__icone"
-              :src="info.icone"
-              target="_blank"
+        <v-flex
+          v-for="(info, i) in infos"
+          :key="i"
+          lg1
+          md2
+          sm2
+          xs4
+          class="finalizando__flex-icones mx-auto my-5"
+        >
+          <a :href="info.link" target="_blank"
+            ><img class="finalizando__icone" :src="info.icone" target="_blank"
           /></a>
         </v-flex>
       </v-layout>
       <DialogComp :switchDialog="switchDialog" @closeDialog="closeDialog" />
-
     </v-container>
   </div>
 </template>
@@ -100,8 +111,8 @@ export default {
       this.switchDialog = !this.switchDialog;
     },
     closeDialog() {
-      this.switchDialog = !this.switchDialog
-    }
+      this.switchDialog = !this.switchDialog;
+    },
   },
   components: {
     DialogComp,
@@ -133,16 +144,22 @@ export default {
 
 .button {
   margin: auto;
-  
 }
 
 .finalizando__buttoon {
   width: 50%;
 }
 
->>>.v-btn--block {   
-    min-width: 66% !important;    
+>>> .v-btn--block {
+  min-width: 66% !important;
 }
 
-
+@media screen and (max-width: 600px) {
+  .finalizando__title {
+    text-align: center;
+    font-family: "Chelsea Market", cursive;
+    color: white;
+    font-size: 1.4em;
+  }
+}
 </style>
