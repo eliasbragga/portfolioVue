@@ -66,7 +66,7 @@ export default {
         {
           url: require("../../static/projetos/projeto-bempaggo-1.png"),
           title: "Bem Paggo",
-          description:"Site desenvolvido para um teste da empresa Bem Paggo. O site simula uma loja virtual onde o cliente seleciona os itens e é direcionado para a página de pagamento para o preenchimento do formulário. O site conta com 3 opções de pagamento: Pix, crédito e débito. Realizei  integração com a API de localização do IBGE para obter os estados brasileiros. Tabém realizei testes automatizados com cypress para testar todo fluxo da aplicação. Utilizei Vue.js com a biblioteca visual Vuetify e boas práticas de JavaScript para o desenvolvimento do projeto.",
+          description:"Site desenvolvido para um teste da empresa Bem Paggo. O site simula uma loja virtual onde o cliente seleciona os itens e é direcionado para a página de pagamento para o preenchimento do formulário. O site conta com 3 opções de pagamento: Pix, crédito e débito. Realizei  integração com a API de localização do IBGE para obter os estados brasileiros. Também realizei testes automatizados com cypress para testar todo fluxo da aplicação. Utilizei Vue.js com a biblioteca visual Vuetify e boas práticas de JavaScript para o desenvolvimento do projeto.",
           show:false,
           link:"hhttps://github.com/eliasbragga/testeFrontEndBemPago"
         },
